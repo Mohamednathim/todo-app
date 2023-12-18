@@ -1,38 +1,183 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+  background-color: #1f1e1e;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+h1 {
   text-align: center;
+  font-family: 'Dancing Script', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-wrapper {
+  background: #353434;
+  padding: 2%;
+  width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  max-height: 77vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(27, 27, 27);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-input {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.todo-input-item input {
+  padding: 8px;
+  border: none;
+  width: 250px;
+}
+
+.todo-input-item input:focus {
+  outline: 2px solid rgb(0, 230, 122);
+}
+
+.primaryBtn {
+  background-color: rgb(0, 230, 122);
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  margin-top: 27px;
+  padding: 10px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.primaryBtn:hover {
+  background-color: rgb(4, 196, 106);
+}
+
+.filter-area {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  font-size: 18px;
+  margin-right: 26px;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+.filter-area label {
+  margin-right: 5px;
+}
+
+.filter-div {
+  margin-right: 720px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+}
+
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-area {
+  margin-bottom: 15px;
+}
+
+.todo-list-item {
+  background-color: #414040;
+  padding: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 0px 3px 5px rgb(43, 42, 42);
+  width: 280px;
+  height: 200px;
+}
+
+.todo-list-item h3 {
+  font-size: 22px;
+  color: rgb(0, 230, 122);
+  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+}
+
+.todo-list-item p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.todo-list-item select {
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.notCompleted {
+  background-color: red;
+  color: #ffffff;
+
+}
+
+.notCompleted :hover {
+  background-color: red;
+  color: #ffffff;
+
+}
+
+.completed {
+  background-color: rgb(0, 230, 122);
+}
+
+.completed :hover {
+  background-color: rgb(0, 230, 122);
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.delete-icon {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+.edit-icon {
+  font-size: 34px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.edit-icon:hover {
+  color: rgb(0, 230, 122);
 }
